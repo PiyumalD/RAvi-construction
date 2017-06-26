@@ -1,0 +1,45 @@
+.clearfix{overflow: auto}
+.wrapper{
+    margin:0 10px 10px 10px;
+    width: 1350px;
+}
+.top-bar{
+    width: 1333px;
+    background: #e3e4fa;
+    background: linear-gradient(#e3e4fa, #dddddc, #3bb9ff, #ff00ff);
+    border-radius: 10px;
+
+}
+.top-bar h1{
+    font-family: cursive;
+    font-size: 52px;
+    font-style: normal;
+    padding-left: 15px
+
+}
+.top-bar p{
+    font-family: courier;
+    font-size: 25px;
+    font-style: bold;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+.type table{
+
+    background: yellow;
+    display: list-item;
+    list-style: inline;
+}
+.type table td{
+    padding-left: 10px;
+    padding-bottom: 15px;
+    font-size:larger;
+
+}
+.type table td select{
+    font-size: large;
+}
+.type table td butto{
+    font-size: larger;
+}

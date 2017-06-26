@@ -1,0 +1,45 @@
+.clearfix{overflow: auto}
+.wrapper{
+    margin:0 10px 10px 10px;
+    width: 1350px;
+}
+.top-bar{
+    width: 1333px;
+    background: #e3e4fa;
+    background: linear-gradient(#e3e4fa, #dddddc, #3bb9ff, #ff00ff);
+    border-radius: 10px;
+
+}
+.top-bar h1{
+    font-family: cursive;
+    font-size: 52px;
+    font-style: normal;
+    padding-left: 15px
+
+}
+.top-bar p{
+    font-family: courier;
+    font-size: 25px;
+    font-style: bold;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-bottom: 15px;
+
+}
+.detail{
+    border-radius: 90px;
+}
+.detail ul{
+    background-color: #e3e3e3;
+    border-left: medium;
+    border-top: medium;
+    padding-left: 200px;
+    padding-bottom: 20px;
+
+}
+.detail ul li{
+    border: medium;
+    border-left: medium;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}

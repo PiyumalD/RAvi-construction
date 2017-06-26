@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create student account</title>
+    <link rel="stylesheet" type="text/css" href="createStudent.css">
+</head>
+<body>
+<div class = "wrpper">
+    <div class = "top-bar">
+        <h1>Ravi Heavy Machinary Equipment Traning Institute</h1>
+        <p>Aluthwala, Ambalangoda.<br>
+            T.P. : 091 4944070 / 091 7201163 / 091 7201162<br>
+            FAX : 091 4944070<br>
+            E-mail : raviconstruction@gmail.com</p>
+    </div><!--top-bar-->
+    <div class = "detail clearfix">
+        <form action="submit()" method="post">
+            <ul>
+                <li>
+                    <label for="Name">Student Name : </label>
+                    <input type ="text" id="Name" name="Name" /> <br/>
+                </li>
+                <li>
+                    <label for="address">Address: </label>
+                    <input type="text" id="address" name="address" /><br/>
+                </li>
+                <li>
+                    <label for="nic">NIC : </label>
+                    <input type ="text" id="nic" name="nic" /> <br/>
+                </li>
+                <li>
+                    <label for="birth">Date of Birth: </label>
+                    <input type="date" id="birth" name="birth" /><br/>
+                </li>
+                <li>
+                    <label for="contact">Contact Number : </label>
+                    <input type ="number" id="contact" name="contact" /> <br/>
+                </li>
+                <li>
+                    <tr >
+                        <TD>Gender</TD>
+                        <TD><select name="Gender">
+                            <option value="M" selected >Male</option>
+                            <option value="F"  >Female</option>
+                        </select></TD>
+                    </tr>
+
+                </li>
+                <li>
+                    <tr >
+                        <TD>Course :</TD>
+                        <TD><select name="course">
+                            <option value="BL" selected >Backhoe Loader</option>
+                            <option value="EWB"  >Excavator With Breaker</option>
+                            <option value="MG"  >Moter Grader</option>
+                        </select></TD>
+                    </tr>
+
+                </li>
+                <li>
+                    <label for="email">E-Mail: </label>
+                    <input type="email" id="email" name="email" /><br/>
+                </li>
+                <li>
+                    <label for="StudentID">Student ID : </label>
+                    <input id="StudentID" name="StudentID" />
+                </li>
+
+                    <input type="submit" value="ctreate account" />
+
+            </ul>
+
+        </form>
+    </div><!--detail-->
+
+</div>
+
+</body>
+</html>
