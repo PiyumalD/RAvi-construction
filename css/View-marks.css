@@ -1,0 +1,48 @@
+.top-bar{
+    width: 1285px;
+    height: 65px;
+    background: white;
+    border-radius: 10px;
+    margin: auto;
+
+}
+.top-bar h1{
+    text-transform: uppercase;
+    font-family:"Century Schoolbook";
+    font-size: 37px;
+    font-style:inherit;
+    padding-top: 10px;
+    padding-left: 18px;
+    color: darkblue;
+
+}
+body{
+    background-color: #e3e3e3;
+}
+.marks{
+
+    margin-top: 50px;
+    border-radius: 10px;
+    background: white;
+    width: 260px;
+    height: 200px;
+    padding-top: 30px;
+    padding-left: 110px;
+    margin-top: 50px;
+    margin-left: 490px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+.marks style{
+    padding-left: 50px;
+}
+.wrapper hl{
+    padding-left: 600px;
+    color: darkblue;
+    font-style: normal;
+    font-size: large;
+}
+.wrapper hr{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
