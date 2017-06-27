@@ -1,20 +1,18 @@
 h1{
     font-family:"Century Schoolbook";
-    font-size: 37px;
+    font-size: 42px;
     font-style:inherit;
-    padding-left: 5px;
+    padding-left: 200px;
     color: white;
     padding-top: 10px;
 }
 h4{
-    padding-top: 30px;
-    padding-left: 10px;
-
+    padding-left: 1000px;
 }
 
 .top-bar{
     width: 1270px;
-    height: 65px;
+    height: 130px;
     background: darkblue;
     border-radius: 10px;
     margin: auto;
@@ -30,13 +28,11 @@ h4{
 h2{
     font-family: "Century Schoolbook";
     font-size: 20px;
+    color: white;
     font-style: normal;
     text-transform: uppercase;
-    padding-left: 50px;
-
-}
-body{
-
+    padding-left: 80px;
+    margin: 0 auto;
 }
 a{
     text-decoration: none;
@@ -61,8 +57,16 @@ ul{
 li{
     padding-bottom: 5px;
     margin-bottom: 5px;
-    border-bottom: 1px solid #aaaaaa;
+
 }
 li a:hover{
     color: red;
+}
+h3{
+    color: darkblue;
+    padding-top: 30px;
+    font-size: 25px;
+    margin: 0 auto;
+    padding-left: 270px;
+    padding-bottom: 10px;
 }

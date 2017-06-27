@@ -1,49 +1,61 @@
 h1{
     font-family:"Century Schoolbook";
-    font-size: 37px;
+    font-size: 42px;
     font-style:inherit;
-    padding-left: 5px;
-    color: darkblue;
+    padding-left: 150px;
+    color: white;
     padding-top: 10px;
+
 }
 h4{
-    padding-top: 30px;
-    padding-left: 10px;
+    padding-top: 5px;
+    padding-left: 1000px;
+
 }
 
 .top-bar{
-    width: 1270px;
-    height: 65px;
-    background: white;
+    width: 850px;
+    height: 130px;
+    background: darkblue;
     border-radius: 10px;
     margin: auto;
 }
 
 .main{
-    width: 1270px;
+    width: 800px;
     border-radius: 30px;
     background-color: #e3e3e3;
-    height: 550px;
+    height: 720px;
     padding-left: 60px;
+    margin: 0 auto;
+
 }
 h2{
     font-family: "Century Schoolbook";
     font-size: 20px;
+    color: white;
     font-style: normal;
     text-transform: uppercase;
-    padding-left: 50px;
+    padding-left: 80px;
+    margin: 0 auto;
+
 }
-
+h3{
+    color: darkblue;
+    padding-top: 30px;
+    font-size: 25px;
+    margin: 0 auto;
+    padding-left: 260px;
+    padding-bottom: 10px;
+}
 body{
-
+    background-color: aliceblue;
 }
 li{
     list-style: none;
+    text-decoration: none;
     margin-bottom: 20px;
-    padding-left: 20px;
-}
-label{
-    display: block;
+    padding-left: 10px;
 }
 td{
     padding-bottom: 8px;
@@ -54,4 +66,7 @@ tr{
 button{
     padding-left: 30px;
     padding-bottom: 20px;
+}
+label{
+    text-decoration: none;
 }
