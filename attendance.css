@@ -1,0 +1,132 @@
+h1{
+    font-family:"Times New Roman", Times, serif;
+    font-size: 64px;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 10px;
+    color: purple;
+    font-style: italic;
+}
+h2{
+    font-family: "Century Schoolbook";
+    font-size: 20px;
+    color: white;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    color: indigo;
+
+}
+h3{
+    color: darkblue;
+    padding-top: 30px;
+    font-size: 25px;
+    margin: 0 auto;
+    padding-left: 240px;
+    padding-bottom: 10px;
+}
+h4{
+    padding-top: 5px;
+    text-align: right;
+    padding-right: 25px;
+
+}
+.wrpper{
+    background-image: url(/Users/wimukthirajapaksha/Documents/RAvi-construction-master/img/download2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.top-bar{
+    background: lightblue;
+    border-radius: 10px;
+    height: auto;
+    margin: auto;
+    opacity: 0.8;
+}
+
+.main{
+    width: 800px;
+    border-radius: 30px;
+    background-color: #e3e3e3;
+    padding-bottom: 30px;
+    min-height: 400px;
+    height: auto;
+    opacity: 0.8;
+    padding-left: 60px;
+    margin: auto;
+
+}
+
+
+body{
+    background-color: aliceblue;
+}
+li{
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+td{
+    padding-bottom: 8px;
+}
+tr{
+    padding-left: 5px;
+}
+label{
+    text-decoration: none;
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+}​
+/*.inner_first a:hover{
+    color: blue;
+    background: white;
+}*/
+.inner_first{
+    /*background-color: orange;*/
+    margin: 50px 20px 50px 0;
+    position: absolute;
+}
+.inner_first a{
+    position: relative;
+    color: green;
+    padding: 5px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 30px;
+    border: 1px solid green;
+    text-decoration: none;
+
+}
+.inner_first a:hover{
+    color: blue;
+    background: red;
+    
+}
+.inner_first p{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    padding-left: 50px;
+}
+button{
+    text-align: center;
+    margin-left: 50px;
+    padding: 10px 30px;
+    border-radius: 3px;
+    color: grey;
+    background: purple;
+}
+button:hover, button:active{
+    font-size: 150%;
+}
