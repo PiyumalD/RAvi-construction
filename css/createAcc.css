@@ -1,40 +1,61 @@
-.clearfix{overflow: auto}
-.wrapper{
-    margin:0 10px 10px 10px;
-    width: 1350px;
-}
-.top-bar{
-    width: 1333px;
-    background: #e3e4fa;
-    background: linear-gradient(#e3e4fa, #dddddc, #3bb9ff, #ff00ff);
-    border-radius: 10px;
+h1{
+    font-family:"Century Schoolbook";
+    font-size: 42px;
+    font-style:inherit;
+    padding-left: 150px;
+    color: white;
+    padding-top: 10px;
 
 }
-.top-bar h1{
-    font-family: cursive;
-    font-size: 52px;
-    font-style: normal;
-    padding-left: 15px
+h4{
+    padding-top: 5px;
+    padding-left: 1000px;
 
 }
-.top-bar p{
-    font-family: courier;
+h3{
+    color: darkblue;
+    padding-top: 30px;
     font-size: 25px;
-    font-style: bold;
-    font-weight: bold;
-    padding-left: 15px;
-    padding-bottom: 15px;
+    margin: 0 auto;
+    padding-left: 270px;
+    padding-bottom: 10px;
+}
+h2{
+    font-family: "Century Schoolbook";
+    font-size: 20px;
+    color: white;
+    font-style: normal;
+    text-transform: uppercase;
+    padding-left: 80px;
+    margin: 0 auto;
+
+}
+
+
+.top-bar{
+    width: 1190px;
+    height: 130px;
+    background: darkblue;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 50px;
 }
 .type table{
 
-    background: yellow;
+    background: #e3e3e3;
     display: list-item;
-    list-style: inline;
+    list-style: none;
+    width: 1190px;
+    height: 400px;
+    margin: 70px;
+    border-radius: 10px;
 }
 .type table td{
-    padding-left: 10px;
-    padding-bottom: 15px;
+   padding: 50px;
+
+
     font-size:larger;
+
 
 }
 .type table td select{
@@ -42,4 +63,5 @@
 }
 .type table td butto{
     font-size: larger;
+
 }
