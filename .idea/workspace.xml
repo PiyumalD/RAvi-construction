@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74b7d273-1e4a-4ed6-a741-d37014e75bc3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/EditProfile.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/Edit_Profile.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/html/EditProfile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/html/Edit_Profile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/html/index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/View-marks.css" afterPath="$PROJECT_DIR$/css/View-marks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/createAcc.css" afterPath="$PROJECT_DIR$/css/createAcc.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/createStudent.css" afterPath="$PROJECT_DIR$/css/createStudent.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/createTeacher.css" afterPath="$PROJECT_DIR$/css/createTeacher.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Home_teacher.html" afterPath="$PROJECT_DIR$/html/Home_teacher.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/View-marks.html" afterPath="$PROJECT_DIR$/html/View-marks.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/createAcc.html" afterPath="$PROJECT_DIR$/html/createAcc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/createStudent.html" afterPath="$PROJECT_DIR$/html/createStudent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/createTeacher.html" afterPath="$PROJECT_DIR$/html/createTeacher.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/login.html" afterPath="$PROJECT_DIR$/html/login.html" />
-    </list>
+    <list default="true" id="74b7d273-1e4a-4ed6-a741-d37014e75bc3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -332,16 +316,16 @@
       <option name="presentableId" value="Default" />
       <updated>1498282247039</updated>
       <workItem from="1498282249427" duration="54316000" />
-      <workItem from="1499056685401" duration="8096000" />
+      <workItem from="1499056685401" duration="8590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62412000" />
+    <option name="totallyTimeSpent" value="62906000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="744" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14032497" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
