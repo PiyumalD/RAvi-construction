@@ -36,14 +36,17 @@ body{
 	padding-left: 15px;
 	padding-bottom: 15px;
 }
+.log{
+	width: 300px;
+}
 .log table{
 
 	background: #e3e3e3;
-	width: 700px;
+	width: 900px;
 	border-radius: 10px;
 	margin-top: 50px;
 	margin-left: 30px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	list-style: none;
 	padding-top: 20px;
 	padding-bottom:20px;
@@ -97,6 +100,7 @@ body{
 }
 .log table{
 	padding-left: 10px;
+	padding-right:10px
 	padding-top: 2px;
 }
 .log table td input{
