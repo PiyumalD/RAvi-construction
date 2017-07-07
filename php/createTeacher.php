@@ -19,22 +19,25 @@ if (isset($_POST['submit']))
     $Gender = ($_POST['Gender']);
     $Course = ($_POST['Course']);
     $Email = ($_POST['Email']);
-    $ID = ($_POST['ID']);
+    $UserName = ($_POST['UserName']);
     $Password1 = ($_POST['Password1']);
     $Password2 = ($_POST['Password2']);
-    $UserName = ($_POST['UserName']);
 
+    if ($Password1 != $Password2){
+        echo "<script>alert('PASSWORDS DO NOT MATCHED!');</script>";
+    }else {
 
-    $query = ("INSERT INTO teacher (Name,Address,NIC,DateOfBirth,JoinedDate,ContactNo,Gender,Course,Email,ID,Password1,Password2,UserName) VALUES ('$Name', '$Address','$NIC','$DateOfBirth','$JoinedDate','$ContactNo','$Gender','$Course','$Email','$ID','$Password1','$Password2','$UserName')");
+        $query = ("INSERT INTO teacher (Name,Address,NIC,DateOfBirth,JoinedDate,ContactNo,Gender,Course,Email,Password1,Password2,UserName) VALUES ('$Name', '$Address','$NIC','$DateOfBirth','$JoinedDate','$ContactNo','$Gender','$Course','$Email','$Password1','$Password2','$UserName')");
 
+        if(mysqli_query($db,$query))
+        {
+            echo "<script>alert('INSERTED SUCCESSFULLY');</script>";
+        }
+        else
+        {
+            echo "<script>alert('FAILED TO INSERT');</script>";
+        }
 
-    if(mysqli_query($db,$query))
-    {
-        echo "<script>alert('INSERTED SUCCESSFULLY');</script>";
-    }
-    else
-    {
-        echo "<script>alert('FAILED TO INSERT');</script>";
     }
 
 }
@@ -67,27 +70,27 @@ mysqli_close($db);
                 <ul>
                     <li>
                         <label for="Name">Teacher Name : </label>
-                        <input type ="text" id="Name" name="Name" /> <br/>
+                        <input type ="text" id="Name" name="Name" required /> <br/>
                     </li>
                     <li>
                         <label for="Address">Address: </label>
-                        <input type="text" id="Address" name="Address" /><br/>
+                        <input type="text" id="Address" name="Address" required /><br/>
                     </li>
                     <li>
                         <label for="NIC">NIC : </label>
-                        <input type ="text" id="NIC" name="NIC" /> <br/>
+                        <input type ="text" id="NIC" name="NIC" required /> <br/>
                     </li>
                     <li>
                         <label for="DateOfBirth">Date of Birth: </label>
-                        <input type="date" id="DateOfBirth" name="DateOfBirth" /><br/>
+                        <input type="date" id="DateOfBirth" name="DateOfBirth" required /><br/>
                     </li>
                     <li>
                         <label for="JoinedDate">Joined Date: </label>
-                        <input type="date" id="JoinedDate" name="JoinedDate" /><br/>
+                        <input type="date" id="JoinedDate" name="JoinedDate" required /><br/>
                     </li>
                     <li>
                         <label for="ContactNo">Contact Number : </label>
-                        <input type ="number" id="ContactNo" name="ContactNo" /> <br/>
+                        <input type ="number" id="ContactNo" name="ContactNo" required /> <br/>
                     </li>
                     <li>
                         <tr >
@@ -112,23 +115,19 @@ mysqli_close($db);
                     </li>
                     <li>
                         <label for="Email">E-Mail: </label>
-                        <input type="text" id="Email" name="Email" /><br/>
-                    </li>
-                    <li>
-                        <label for="ID">Teacher ID : </label>
-                        <input id="ID" name="ID" />
+                        <input type="text" id="Email" name="Email" required /><br/>
                     </li>
                     <li>
                         <label for="Password1">Password : </label>
-                        <input id="Password1" name="Password1" />
+                        <input type="password" id="Password1" name="Password1" required />
                     </li>
                     <li>
                         <label for="Password2">Confirm Password : </label>
-                        <input id="Password2" name="Password2" />
+                        <input type="password" id="Password2" name="Password2" required />
                     </li>
                     <li>
                         <label for="UserName">UserName : </label>
-                        <input id="UserName" name="UserName" />
+                        <input id="UserName" name="UserName" required />
                     </li>
 
                 </ul>
