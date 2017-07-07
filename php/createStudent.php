@@ -48,8 +48,8 @@ mysqli_close($db);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Teacher Account</title>
-    <link rel="stylesheet" type="text/css" href="../css/createTeacher.css"/>
+    <title>Create Student Account</title>
+    <link rel="stylesheet" type="text/css" href="../css/createStudent.css"/>
 </head>
 <body>
 <div class = "wrpper">
@@ -69,7 +69,7 @@ mysqli_close($db);
             <form action="" method="POST">
                 <ul>
                     <li>
-                        <label for="Name">Teacher Name : </label>
+                        <label for="Name">Student Name : </label>
                         <input type ="text" id="Name" name="Name" required /> <br/>
                     </li>
                     <li>

@@ -17,7 +17,6 @@ if (isset($_POST['submit']))
     $JoinedDate = ($_POST['JoinedDate']);
     $ContactNo = ($_POST['ContactNo']);
     $Gender = ($_POST['Gender']);
-    $Course = ($_POST['Course']);
     $Email = ($_POST['Email']);
     $UserName = ($_POST['UserName']);
     $Password1 = ($_POST['Password1']);
@@ -27,7 +26,7 @@ if (isset($_POST['submit']))
         echo "<script>alert('PASSWORDS DO NOT MATCHED!');</script>";
     }else {
 
-        $query = ("INSERT INTO teacher (Name,Address,NIC,DateOfBirth,JoinedDate,ContactNo,Gender,Course,Email,Password1,Password2,UserName) VALUES ('$Name', '$Address','$NIC','$DateOfBirth','$JoinedDate','$ContactNo','$Gender','$Course','$Email','$Password1','$Password2','$UserName')");
+        $query = ("INSERT INTO dataOpertaor (Name,Address,NIC,DateOfBirth,JoinedDate,ContactNo,Gender,Email,Password1,Password2,UserName) VALUES ('$Name', '$Address','$NIC','$DateOfBirth','$JoinedDate','$ContactNo','$Gender','$Email','$Password1','$Password2','$UserName')");
 
         if(mysqli_query($db,$query))
         {
@@ -48,8 +47,8 @@ mysqli_close($db);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Teacher Account</title>
-    <link rel="stylesheet" type="text/css" href="../css/createTeacher.css"/>
+    <title>Create DataOperator Account</title>
+    <link rel="stylesheet" type="text/css" href="../css/dataOperator.css"/>
 </head>
 <body>
 <div class = "wrpper">
@@ -69,7 +68,7 @@ mysqli_close($db);
             <form action="" method="POST">
                 <ul>
                     <li>
-                        <label for="Name">Teacher Name : </label>
+                        <label for="Name">Name : </label>
                         <input type ="text" id="Name" name="Name" required /> <br/>
                     </li>
                     <li>
@@ -101,18 +100,6 @@ mysqli_close($db);
                                 </select></TD>
                         </tr>
 
-                    </li>
-                    <li>
-                        <tr >
-                            <TD>Course :</TD>
-                            <TD><select name="Course">
-                                    <option value="BL" selected >Backhoe Loader</option>
-                                    <option value="EWB"  >Excavator With Breaker</option>
-                                    <option value="MG"  >Moter Grader</option>
-                                </select></TD>
-                        </tr>
-
-                    </li>
                     <li>
                         <label for="Email">E-Mail: </label>
                         <input type="email" id="Email" name="Email" required /><br/>
@@ -131,7 +118,7 @@ mysqli_close($db);
                     </li>
 
                 </ul>
-                <button type ="submit" name="submit" value="send to database"> SEND TO DATABASE </button>
+                <button type ="submit" name="submit" value="send to database"> Create </button>
             </form>
 
         </ul>
