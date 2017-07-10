@@ -5,6 +5,8 @@ session_start();
 $user = $_SESSION['user'];
 $student = new Student($user);
 
+
+
 ?>
 <html lang="en">
 <head>
@@ -17,7 +19,7 @@ $student = new Student($user);
 
 <div class = "wrpper">
     <h4> You are logged as Student  </h4>
-<?php    echo $student->getId(); ?>
+
 
     <div class = "top-bar">
 

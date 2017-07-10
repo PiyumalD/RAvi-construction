@@ -103,7 +103,8 @@
     {
         $this->birth = $birth;
     }
-    public function _construct($id){
+    public function __construct($id){
+
         $this->id=$id;
         $conn= new mysqli('localhost','root','','ravi construction');
         $stmt=$conn->query("select * from  students where id='{$id}'");
