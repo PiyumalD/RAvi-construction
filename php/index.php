@@ -5,6 +5,7 @@ $pass = '';
 $conn= new mysqli('localhost','root','','ravi construction');
 
 if(isset($_POST['btn'])){
+
 	$username = strip_tags($_POST['user']);
 	$pass=strip_tags($_POST['pwd']);
 
@@ -23,6 +24,7 @@ if(isset($_POST['btn'])){
 		$row=$stmt->fetch_assoc();
 
 		if($row['id']==$username & $row['password']==$pass) {
+		    $student= new Student($pass);
 			header("Location:Home_teacher.php");
 			
 		}else
@@ -32,8 +34,8 @@ if(isset($_POST['btn'])){
 			header("location:index.php?error=1");
 
 
-
-
+    session_start();
+    $_SESSION['user'] = $username;
 
 }
 $conn->close();

@@ -1,15 +1,23 @@
+<?php
+include 'Student.php';
+$user="";
+session_start();
+$user = $_SESSION['user'];
+$student = new Student($user);
 
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
 
-    <title>Teacher Home</title>
+    <title>Student Home</title>
     <link rel="stylesheet" type="text/css" href="../css/Home_student.css"/>
 </head>
 <body>
-<div class = "wrpper">
-    <h4> You are logged as Student 1 </h4>
 
+<div class = "wrpper">
+    <h4> You are logged as Student  </h4>
+<?php    echo $student->getId(); ?>
 
     <div class = "top-bar">
 
