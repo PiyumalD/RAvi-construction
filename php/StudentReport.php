@@ -38,32 +38,28 @@
 
             <li>
                 <label for="Index"><b>Index No :</b></label>
-                <label id="Index"><?php echo $row['UserName'];?></label>
+                <label id="Index"><?php session_start(); echo $_SESSION['UserName'];?></label>
             </li>
             <li>
                 <label for="Student's Name"><b>Student's name :</b></label>
-                <label id="Student's Name"><?php echo $row['Name'];?></label>
+                <label id="Student's Name"><?php echo $_SESSION['Name'];?></label>
             </li>
             <li>
                 <label for="NIC no"><b>NIC no :</b></label>
-                <label id="NIC no"><?php echo $row['NIC'];?></label>
+                <label id="NIC no"><?php echo $_SESSION['NIC'];?></label>
             </li>
             <li>
                 <label for="Address"><b>Address :</b></label>
-                <label id="Address"><?php echo $row['Address'];?></label>
+                <label id="Address"><?php echo $_SESSION['Address'];?></label>
             </li>
             <li>
                 <label for="Contact no"><b>Contact no :</b></label>
-                <label id="Contact no"><?php echo $row['ContactNo'];?></label>
+                <label id="Contact no"><?php echo $_SESSION['ContactNo'];?></label>
             </li>
 
             <li>
                 <label for="Course"><b>Course :</b></label>
-                <label id="Course"><?php echo $row['Course'];?></label>
-            </li>
-            <li>
-                <label for="Batch no"><b>Batch no :</b></label>
-                <label id="Batch no"><?php echo $row['BatchNo'];?></label>
+                <label id="Course"><?php echo $_SESSION['Course'];?></label>
             </li>
 
             <li>
@@ -73,7 +69,6 @@
                 <tr>
                     <th class="header" colspan='2'> Practical no </th>
                     <th class="header"> Marks </th>
-                    <th class="header"> Percentage </th>
                     <th class="header"> Feedback </th>
 
                 </tr>
@@ -85,31 +80,26 @@
                     <td class='  item b1b' colspan='1'>01</td>
                     <td class='  item b1b itemcenter ' ></td>
                     <td class='  item b1b itemcenter ' ></td>
-                    <td class='  item b1b feedbacktext' ></td>
                 </tr>
                 <tr>
                     <td class='  item b1b' colspan='1'>02</td>
                     <td class='  item b1b itemcenter ' ></td>
                     <td class='  item b1b itemcenter ' ></td>
-                    <td class='  item b1b feedbacktext' ></td>
                 </tr>
                 <tr>
                     <td class='  item b1b' colspan='1'>03</td>
                     <td class='  item b1b itemcenter ' ></td>
                     <td class='  item b1b itemcenter ' ></td>
-                    <td class='  item b1b feedbacktext' ></td>
                 </tr>
                 <tr>
                     <td class='  item b1b' colspan='1'>04</td>
                     <td class='  item b1b itemcenter ' ></td>
                     <td class='  item b1b itemcenter ' ></td>
-                    <td class='  item b1b feedbacktext' ></td>
                 </tr>
                 <tr>
                     <td class='  item b1b' colspan='1'>05</td>
                     <td class='  item b1b itemcenter ' ></td>
                     <td class='  item b1b itemcenter ' ></td>
-                    <td class='  item b1b feedbacktext' ></td>
                 </tr>
             </table>
 
@@ -121,6 +111,7 @@
                 <label for="Current percentage"><b>Current Percentage :</b></label>
                 <label id="current percentage"></label>
             </li>
+
         </ul>
 
     </div>

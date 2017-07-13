@@ -74,4 +74,15 @@ class Teacher extends Staff
         header("location: viewProfileTeacher.php");
 
     }
+
+    public static function viewStudentReport($x){
+        $_SESSION['Index']=$x['UserName'];
+        $_SESSION['Name']=$x['Name'];
+        $_SESSION['NIC']=$x['NIC'];
+        $_SESSION['Address']=$x['Address'];
+        $_SESSION['ContactNo']=$x['ContactNo'];
+        $_SESSION['Course']=$x['Course'];
+
+        header("location: StudentReport.php");
+    }
 }
