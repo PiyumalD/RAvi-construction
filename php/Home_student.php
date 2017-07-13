@@ -5,7 +5,9 @@ session_start();
 $user = $_SESSION['user'];
 $student = new Student($user);
 
-
+if(isset($_POST['viewProfile'])){
+    $student->viewProfile();
+}
 
 ?>
 <html lang="en">
@@ -18,7 +20,7 @@ $student = new Student($user);
 <body>
 
 <div class = "wrpper">
-    <h4> You are logged as Student  </h4>
+    <h4> You are logged as  <?php echo $student->getName()?></h4>
 
 
     <div class = "top-bar">
@@ -37,14 +39,16 @@ $student = new Student($user);
 
         </div><!--introImg-->
         <div class="links">
-            <ul>
-                <li><a href="#">View profile</a></li>
-                <li><a href="#">Edit profile</a></li>
-                <li><a href="#">View course details</a></li>
-                <li><a href="#">View marks</a></li>
+            <form action="" method="post">
+
+                <button type ="submit" name="viewProfile">VIEW PROFILE</button>
+                <button type ="submit" name="editProfile">EDIT PROFILE</button>
+                <button type ="submit" name="viewCourseDetails">VIEW COURSE DETAILS</button>
+                <button type ="submit" name="viewMarks">VIEW MARKS</button>
 
 
-            </ul>
+            </form>
+
 
 
         </div> <! -- LINKS-->

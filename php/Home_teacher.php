@@ -1,4 +1,17 @@
 
+<?php
+include 'Teacher.php';
+$user="";
+session_start();
+$user = $_SESSION['user'];
+$teacher = new Teacher($user);
+
+if(isset($_POST['viewProfile'])){
+    $teacher->viewProfile();
+}
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,36 +27,21 @@
     <div class = "top-bar">
 
         <h1>Ravi Costructions</h1>
-        <h2>RAVI HEAVY MACHINARY EQUIPMENT TRAINING INSTITUTE</h2>
-
-    </div><!--top-bar-->
+        <h2>RAVI HEAVY MACHINARY EQUIPMENT TRAINING INSTITUTE</h2
 
     <div class="main">
 
         <p><h3><u>Teacher's Home</u></h3></p>
 
-        <div class="intro">
+        <form action="" method="post">
 
-            <div class="introText">
-                <ul>
-                    <li><a href="View%20Profile.html">View Profile</a> </li>
-                    <li><a href="EditProfile.html">Edit Profile</a> </li>
-                    <li><a href="ViewCourseDetails.html">View Course Details</a> </li>
-                    <li><a href="EnterMarks.html">Enter Students' marks</a> </li>
-                    <li><a href="View_Report.html">View Students' reports</a> </li>
-                </ul>
-            </div><!--introText-->
+            <button type ="submit" name="viewProfile">VIEW PROFILE</button>
+            <button type ="submit" name="editProfile">EDIT PROFILE</button>
+            <button type ="submit" name="viewCourseDetails">VIEW COURSE DETAILS</button>
+            <button type ="submit" name="enterMarks">ENTER STUDENTS' MARKS</button>
+            <button type ="submit" name="viewStudentReport">VIEW STUDENT'S REPORTS</button>
 
-            <div class="introImage">
-
-                <img src="../img/images.jpg" alt="vehicle" width="400px">
-
-            </div><!--introImage-->
-        </div><!--intro-->
-    </div>
-    <li> <a href="Home_teacher.html"> >>Home>></a></li>
-    <li> <a href="View_Report.html"> >>Back>></a></li>
-    <li> <a href="#"> >>Logout>></a></li>
+        </form>
 </div>
 </body>
 </html>
