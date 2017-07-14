@@ -2,11 +2,14 @@
 include 'Student.php';
 $user="";
 session_start();
-$user = $_SESSION['user'];
+$user = $_SESSION['user1'];
 $student = new Student($user);
 
 if(isset($_POST['viewProfile'])){
     $student->viewProfile();
+}
+if(isset($_POST['editProfile'])){
+    $student->editProfile();
 }
 
 ?>

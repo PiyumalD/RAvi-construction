@@ -3,12 +3,15 @@
 include 'Teacher.php';
 $user="";
 session_start();
-$user = $_SESSION['user'];
-$teacher = new Teacher($user);
+$user1 = $_SESSION['user1'];
+$teacher = new Teacher($user1);
 
 if(isset($_POST['viewProfile'])){
     $teacher->viewProfile();
+}else if(isset($_POST['editProfile'])){
+    $teacher->editProfile();
 }
+
 
 ?>
 
@@ -21,7 +24,7 @@ if(isset($_POST['viewProfile'])){
 </head>
 <body>
 <div class = "wrpper">
-    <h4> You are logged as Teacher 1 </h4>
+    <h4> You are logged as <?php echo $teacher->getName()?> </h4>
 
 
     <div class = "top-bar">
