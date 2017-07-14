@@ -9,7 +9,6 @@ $operator = new DataOperator($user);
 if(isset($_POST['viewProfile'])){
     $operator->viewProfile();
 }
-
 ?>
 
 <html lang="en">
@@ -21,7 +20,7 @@ if(isset($_POST['viewProfile'])){
 </head>
 <body>
 <div class = "wrpper">
-    <h4> You are logged as Teacher 1 </h4>
+    <h4> You are logged as <<?php $_SESSION['Name']; ?></h4>
 
 
     <div class = "top-bar">
@@ -39,8 +38,27 @@ if(isset($_POST['viewProfile'])){
                 <button type ="submit" name="viewProfile">EDIT PROFILE</button>
                 <button type ="submit" name="viewProfile">VIEW COURSE DETAILS</button>
                 <button type ="submit" name="viewProfile">ENTER STUDENTS' ATTENDANCE</button>
+                <button type ="submit" name="viewProfile">CREATE NEW ACCOUNT</button>
+                <button type ="submit" name="viewProfile">ENTER STUDENTS' MARKS</button>
+                
 
             </form>
+            <?php 
+            if (isset($_POST['VIEW COURSE DETAILS'])) {?>
+                <div class="navigation">
+                    <?php 
+                    $response_operator=$operator->viewCourseDetails(); 
+                    $row=mysqli_fetch_array($response_operator);
+                    while($row=mysqli_fetch_array($response)){
+                        echo '<tr><td align="left">'.$row['Course_Name'].'</td><td align="left">'.$row['Starting_Date'].'</td><td align="left">'.$row['Ending_Date'].'</td>';
+                        echo '</tr>';
+                    }
+                    ?>
+                </div>
+                $query="SELECT * FROM  courses_updatecourses";
+                $response=@mysqli_query($conn,$query);
+                return $response;
+            <?php } ?>
         </div>
 </body>
 </html>

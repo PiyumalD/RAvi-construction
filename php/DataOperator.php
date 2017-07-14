@@ -57,4 +57,31 @@ class DataOperator extends Staff
         header("location: viewProfileOperator.php");
 
     }
+    public function viewCourseDetails(){
+        $conn= new mysqli('localhost','dataOperator','','courses')
+        OR die('could not connect to MYSQL'. mysqli_connect_error());
+        $query="SELECT * FROM  courses_updatecourses";
+        $response=@mysqli_query($conn,$query);
+        if($response){
+            echo '<table align="left" cellspacing="5" cellpadding="8">
+            <tr><td align="left"><b>Course name</b></td>
+            <td align="left"><b>Starting Date</b></td>
+            <td align="left"><b>Ending Date</b></td></tr>';
+            echo '</table>';
+        return $response;
+                
+    }
+    public function updateCourseDetails($course){
+
+    }
+    public function getAttendance(){
+        
+    }
+    public function inputStudentsMarks(){
+
+    }
+    
+    public function createNewAccount(){
+
+    }
 }
