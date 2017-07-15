@@ -1,6 +1,6 @@
 <?php
 include 'Staff.php';
-include 'MotorGrader.php';
+include 'Course.php';
 
 class Teacher extends Staff
 {
@@ -62,48 +62,30 @@ class Teacher extends Staff
     }
     public function viewProfile(){
 
-        $_SESSION['Name']=$this->getName();
-        $_SESSION['UserName']=$this->getUsername();
-        $_SESSION['Address'] = $this->getAddress();
-        $_SESSION['ContactNo']=$this->getContactNo();
-        $_SESSION['Email']=$this->getEmail();
-        $_SESSION['DateOfBirth']=$this->getDateOfBirth();
-        $_SESSION['Gender']=$this->getGender();
-        $_SESSION['NIC']=$this->getNic();
-        $_SESSION['Password1']=$this->getPassword();
-        $_SESSION['Course']=$this->getCourse();
-        $_SESSION['JoinedDate']=$this->getJoinedDate();
+        $_SESSION['user']=serialize($this);
 
         header("location: viewProfileTeacher.php");
 
     }
 
-    public static function viewStudentReport($x){
-        //$_SESSION['Index1']=$x[0];
-//        $_SESSION['Name1']=$x['Name'];
-//        $_SESSION['NIC1']=$x['NIC'];
-//        $_SESSION['Address1']=$x['Address'];
-//        $_SESSION['ContactNo1']=$x['ContactNo'];
-//        $_SESSION['Course1']=$x['Course'];
+    public function viewStudentReport($username){
+
+        $student = new Student($username);
+
+        $_SESSION['user1'] = serialize($student);
 
         header("location: StudentReport.php");
-        return $x;
+
     }
 
     public function viewCourseDetails(){
 
-        $course=new MotorGrader('MotorGrader');
-        $x=$course-> getArray();
+            $course1=new Course('BL');
+            $_SESSION['user']=serialize($course1);
 
-        $_SESSION['CourseName']=$x['Name'];
-        $_SESSION['NoOfStudents']=$x['NoStudents'];
-        $_SESSION['TeacherName']=$x['Teacher'];
-        $_SESSION['BatchNo']=$x['Batch'];
-        $_SESSION['StartDate']=$x['StartDate'];
-        $_SESSION['DueDate']=$x['DueDate'];
+            header("location: viewCourseDetailsTeacher.php");
 
-        header("location: viewCourseDetailsTeacher.php");
-        //return $row;
+
     }
 
 }
