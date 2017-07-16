@@ -58,18 +58,41 @@ class DataOperator extends Staff
 
     }
     public function viewCourseDetails(){
-        $conn= new mysqli('localhost','dataOperator','','courses')
-        OR die('could not connect to MYSQL'. mysqli_connect_error());
-        $query="SELECT * FROM  courses_updatecourses";
-        $response=@mysqli_query($conn,$query);
-        if($response){
-            echo '<table align="left" cellspacing="5" cellpadding="8">
-            <tr><td align="left"><b>Course name</b></td>
-            <td align="left"><b>Starting Date</b></td>
-            <td align="left"><b>Ending Date</b></td></tr>';
-            echo '</table>';
-        return $response;
-                
+        $conn2 = mysqli_connect('localhost','root','Whishana@2366','ravi');
+        $query = "SELECT * FROM courses";
+        if (!$conn2) {
+            die('can not connect to the database'.mysql_error());
+        }
+        $result = mysqli_query($conn2,$query);
+        if (!$result) {
+            die("database query failed...");
+        }
+
+        // header("location: empty.php");
+        // header("location: emptyPage.php");
+        
+
+        // $output = call_page('emptyPage.php');
+        // echo $output;
+        while ($row = mysqli_fetch_assoc($result)) {
+            // return $row;
+            // return $row;
+            $_SESSION['CourseName']=$row['CourseName'];
+            $_SESSION['Starting_Date']=$row['Starting_Date'];
+            $_SESSION['Ending_Date']=$row['Ending_Date'];
+            $_SESSION['NoOfStudents']=$row['NoOfStudents'];
+            $_SESSION['Batch']=$row['Batch'];
+            $_SESSION['TeacherName']=$row['TeacherName'];
+            // echo '
+            //     <tr>
+            //         <td>'.$row['CourseName'].'</td>
+            //         <td>'.$row['Starting_Date'].'</td>
+            //         <td>'.$row['Ending_Date'].'</td>
+            //         <td>'.$row['NoOfStudents'].'</td>
+            //         <td>'.$row['Batch'].'</td>
+            //         <td>'.$row['TeacherName'].'</td>
+            //     </tr>';
+        }       
     }
     public function updateCourseDetails($course){
 
