@@ -6,9 +6,6 @@ session_start();
 $user = $_SESSION['user'];
 $owner = new Owner($user);
 
-if(isset($_POST['viewProfile'])){
-    $owner->viewProfile();
-}
 
 ?>
 
@@ -37,8 +34,19 @@ if(isset($_POST['viewProfile'])){
 
                 <button type ="submit" name="viewProfile">VIEW PROFILE</button>
                 <button type ="submit" name="editProfile">EDIT PROFILE</button>
+                <button type ="submit" name="viewCourseDetails">VIEW COURSE DETAILS</button>
+                <button type ="submit" name="issueCertificate">ISSUE CERTIFICATE</button>
 
             </form>
         </div>
+        
 </body>
 </html>
+
+<?php 
+if(isset($_POST['viewProfile'])){
+    $owner->viewProfile();
+}elseif (isset($_POST['issueCertificate'])) {
+    header("location:issueCertificateIndexGetting.php");
+}
+?>
