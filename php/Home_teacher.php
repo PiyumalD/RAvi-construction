@@ -3,15 +3,16 @@
 include 'Teacher.php';
 $user="";
 session_start();
-$user1 = $_SESSION['user1'];
-$teacher = new Teacher($user1);
+$user = $_SESSION['user'];
+$teacher = new Teacher($user);
 
 if(isset($_POST['viewProfile'])){
     $teacher->viewProfile();
-}else if(isset($_POST['editProfile'])){
-    $teacher->editProfile();
+}elseif (isset($_POST['viewCourseDetails'])) {
+    $teacher->viewCourseDetails();
+}else{
+    //echo "55555555";
 }
-
 
 ?>
 
@@ -24,7 +25,7 @@ if(isset($_POST['viewProfile'])){
 </head>
 <body>
 <div class = "wrpper">
-    <h4> You are logged as <?php echo $teacher->getName()?> </h4>
+    <h4> You are logged as <?php echo $teacher->getName(); ?></h4>
 
 
     <div class = "top-bar">
@@ -45,6 +46,11 @@ if(isset($_POST['viewProfile'])){
             <button type ="submit" name="viewStudentReport">VIEW STUDENT'S REPORTS</button>
 
         </form>
+        <?php 
+        if (isset($_POST['enterMarks'])) {
+            header("location: EnterMark.php?usr=".$teacher->getName()."&ty=".'teacher');
+        }
+        ?>
 </div>
 </body>
 </html>

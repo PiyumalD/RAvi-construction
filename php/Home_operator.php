@@ -33,9 +33,9 @@ $operator = new DataOperator($user);
                 <div class="dropdown">
                     <button class="dropbtn" name="editCourseDetails">EDIT COURSE DETAILS</button>
                     <div class="dropdown-content">
-                        <a href="EditCourseDetails.php?index=1">Backhoe Loader</a>
-                        <a href="EditCourseDetails.php?index=2">Excavator With Breaker</a>
-                        <a href="EditCourseDetails.php?index=3">Moter Grader</a>
+                        <button type ="submit" name="BackhoeLoader">Backhoe Loader</button>
+                        <button type ="submit" name="ExcavatorWithBreaker">Excavator With Breaker</button>
+                        <button type ="submit" name="MoterGrader">Moter Grader</button> 
                     </div>
                 </div>
 
@@ -46,6 +46,23 @@ $operator = new DataOperator($user);
                 <button type ="submit" name="enterStudentsMarks">ENTER STUDENTS' MARKS</button>
 
             </form>
+
+            <?php  
+            print_r($_POST);
+            if(isset($_POST['viewProfile'])){
+                $operator->viewProfile();
+                // echo "string";
+            }elseif (isset($_POST['BackhoeLoader'])) {
+                header("location: EditCourseDetails.php?usr=".$operator->getName()."&index=".'1');
+            }elseif (isset($_POST['ExcavatorWithBreaker'])) {
+                header("location: EditCourseDetails.php?usr=".$operator->getName()."&index=".'2');
+            }elseif (isset($_POST['MoterGrader'])) {
+                header("location: EditCourseDetails.php?usr=".$operator->getName()."&index=".'3');
+            }elseif (isset($_POST['enterStudentsMarks'])) { 
+                header("location: EnterMark.php?usr=".$operator->getName()."&ty=".'operator');
+            }else{
+                echo "LLLLL";
+            }?>
 
         </div>
 </body>

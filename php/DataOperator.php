@@ -12,7 +12,6 @@ class DataOperator extends Staff
     {
         return $this->joinedDate;
     }
-
     /**
      * @param mixed $joinedDate
      */
@@ -24,8 +23,8 @@ class DataOperator extends Staff
     public function __construct($id){
 
         $this->setId($id);
-        $conn= new mysqli('localhost','root','','ravi');
-        $stmt=$conn->query("select * from  dataoperator where UserName='{$id}'");
+        $conn= new mysqli('localhost','root','Whishana@2366','ravi');
+        $stmt=$conn->query("SELECT * FROM  dataoperator WHERE UserName='{$id}'");
         $row=$stmt->fetch_assoc();
 
         $this->setName($row['Name']);
@@ -37,7 +36,7 @@ class DataOperator extends Staff
         $this->setDateOfBirth($row['DateOfBirth']);
         $this->setGender($row['Gender']);
         $this->setNic($row['NIC']);
-        $this->setPassword($row['Password1']);
+        $this->setPassword($row['Password']);
         $this->setJoinedDate($row['JoinedDate']);
 
     }
@@ -51,7 +50,7 @@ class DataOperator extends Staff
         $_SESSION['DateOfBirth']=$this->getDateOfBirth();
         $_SESSION['Gender']=$this->getGender();
         $_SESSION['NIC']=$this->getNic();
-        $_SESSION['Password1']=$this->getPassword();
+        $_SESSION['Password']=$this->getPassword();
         $_SESSION['JoinedDate']=$this->getJoinedDate();
 
         header("location: viewProfileOperator.php");
@@ -94,17 +93,19 @@ class DataOperator extends Staff
             //     </tr>';
         }       
     }
-    public function updateCourseDetails($course){
-
-    }
-    public function getAttendance(){
-        
-    }
-    public function inputStudentsMarks(){
-
-    }
     
-    public function createNewAccount(){
+    // public function updateCourseDetails($course){
 
-    }
+    // }
+    // public function getAttendance(){
+        
+    // }
+    // public function inputStudentsMarks(){
+
+    // }
+    
+    // public function createNewAccount(){
+
+    // }
 }
+?>

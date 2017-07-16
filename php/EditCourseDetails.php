@@ -9,7 +9,7 @@ session_start();
 </head>
 <body>
 <div class = "wrpper">
-    <h4> You are logged as</h4>
+    <h4> You are logged as <?php echo $_GET['usr']; ?></h4>
 
     <div class = "top-bar">
 
@@ -41,7 +41,7 @@ session_start();
         $_SESSION['Batch']=$data['Batch'];
         $_SESSION['NoOfStudents']=$data['NoOfStudents'];
         $_SESSION['TeacherName']=$data['TeacherName'];
-        echo $data['CourseName'].'---------'.$data['Starting_Date'].'---------'.$data['Ending_Date'];
+        // echo $data['CourseName'].'---------'.$data['Starting_Date'].'---------'.$data['Ending_Date'];
         //var_dump($data);
         //echo "<hr/>";
     }
@@ -82,32 +82,38 @@ session_start();
         echo "</ul>";
         ?>
         <hr>
-        <button type="submit" value="Submit">Submit</button>
+        <button name="submit" type="submit" value="Submit">Submit</button>
     	<button type="reset" value="Reset">Reset</button>
         </form>
         <?php  
         $conn2 = mysqli_connect('localhost','root','Whishana@2366','ravi');
         // echo "<br> $_POST[\"StrDat\"]";
-        
+        // echo "string.............";
+        // print_r($_POST);
+        if ($_POST['submit']==="Submit") {
+        	// echo "works";
+        	if (!empty('$_POST[Bat]') && !empty('$_POST[Stud]') && !empty('$_POST[TeaNam]')) {
+	        	// echo "?????????????????????????????????";
+	        	$_POST['length']=true;
+	        	$query = "UPDATE courses SET Starting_Date='$_POST[StrDat]',Ending_Date='$_POST[EndDat]',Batch='$_POST[Bat]',NoOfStudents='$_POST[Stud]',TeacherName='$_POST[TeaNam]' WHERE ";
+			    if ($CourseName==='Backhoe Loader'){
+			    	$query .="CourseName=\"Backhoe Loader\"";
+		    	}elseif($CourseName==='Excavator With Breaker') {
+		    		$query .="CourseName=\"Excavator With Breaker\"";
+		    	}else{
+		    		$query .="CourseName=\"Moter Grader\"";
+		    	}
+			    $result = mysqli_query($conn2,$query);
+			    if (!$result) {
+			        echo '<script type="text/javascript">';
+				    echo'alert("database query failed...");';
+				    echo 'window.location= "Home_operator.php"';
+				    echo '</script>';
+				}
+	        }
+        }
 
-        if (strlen('$_POST[Bat]')<=4 && strlen('$_POST[Stud]')<=5 && strlen('$_POST[TeaNam]')<=20) {
-        	$_POST['length']=true;
-        	$query = "UPDATE courses SET Starting_Date='$_POST[StrDat]',Ending_Date='$_POST[EndDat]',Batch='$_POST[Bat]',NoOfStudents='$_POST[Stud]',TeacherName='$_POST[TeaNam]' WHERE ";
-		    if ($CourseName==='Backhoe Loader'){
-		    	$query .="CourseName=\"Backhoe Loader\"";
-	    	}elseif($CourseName==='Excavator With Breaker') {
-	    		$query .="CourseName=\"Excavator With Breaker\"";
-	    	}else{
-	    		$query .="CourseName=\"Moter Grader\"";
-	    	}
-		    $result = mysqli_query($conn2,$query);
-		    if (!$result) {
-		        echo '<script type="text/javascript">';
-			    echo'alert("database query failed...");';
-			    echo 'window.location= "Home_operator.php"';
-			    echo '</script>';
-			}
-        }else{
+        else{
         	$_POST['length']=false;
         }
 
