@@ -6,8 +6,8 @@ class Owner extends Staff
     public function __construct($id){
 
         $this->setId($id);
-        $conn= new mysqli('localhost','root','','ravi');
-        $stmt=$conn->query("select * from owner where UserName='{$id}'");
+        $conn= new mysqli('localhost','root','Whishana@2366','ravi');
+        $stmt=$conn->query("SELECT * FROM owner WHERE UserName='{$id}'");
         $row=$stmt->fetch_assoc();
 
         $this->setName($row['Name']);
@@ -15,11 +15,11 @@ class Owner extends Staff
         $this->setUsername($row['UserName']);
         $this->setAddress($row['Address']);
         $this->setContactNo($row['ContactNo']);
-        $this->setEmail($row['Email']);
-        $this->setDateOfBirth($row['DateOfBirth']);
-        $this->setGender($row['Gender']);
-        $this->setNic($row['NIC']);
-        $this->setPassword($row['Password1']);
+        // $this->setEmail($row['Email']);
+        // $this->setDateOfBirth($row['DateOfBirth']);
+        // $this->setGender($row['Gender']);
+        // $this->setNic($row['NIC']);
+        $this->setPassword($row['Password']);
 
     }
     public function viewProfile(){
@@ -28,13 +28,13 @@ class Owner extends Staff
         $_SESSION['UserName']=$this->getUsername();
         $_SESSION['Address'] = $this->getAddress();
         $_SESSION['ContactNo']=$this->getContactNo();
-        $_SESSION['Email']=$this->getEmail();
-        $_SESSION['DateOfBirth']=$this->getDateOfBirth();
-        $_SESSION['Gender']=$this->getGender();
-        $_SESSION['NIC']=$this->getNic();
-        $_SESSION['Password1']=$this->getPassword();
+        // $_SESSION['Email']=$this->getEmail();
+        // $_SESSION['DateOfBirth']=$this->getDateOfBirth();
+        // $_SESSION['Gender']=$this->getGender();
+        // $_SESSION['NIC']=$this->getNic();
+        $_SESSION['Password']=$this->getPassword();
 
-        header("location: viewProfileTeacher.php");
+        header("location: viewProfileOwner.php");
 
     }
 }

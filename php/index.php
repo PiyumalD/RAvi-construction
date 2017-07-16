@@ -2,7 +2,7 @@
 $username = '';
 $pass = '';
 
-$conn= new mysqli('localhost','root','','ravi construction');
+$conn= mysqli_connect('localhost','root','Whishana@2366','ravi');
 
 if(isset($_POST['btn'])){
 
@@ -10,22 +10,41 @@ if(isset($_POST['btn'])){
 	$pass=strip_tags($_POST['pwd']);
 
 	if(substr($username,-1)=="S"){
-		$stmt=$conn->query("select * from  students where id='{$username}'");
+		$stmt=$conn->query("SELECT * FROM  student WHERE UserName='{$username}'");
 		$row=$stmt->fetch_assoc();
 
-		if($row['id']==$username & $row['password']==$pass) {
+		if($row['UserName']==$username && $row['Password']==$pass) {
 			header("Location:Home_student.php");
 			
 		}else
 			header("location:index.php?error=1");
 
-	}else if(substr($username,-1)=="T"){
-		$stmt=$conn->query("select * from  teachers where id='{$username}'");
+	}else if(substr($username,-1)=='O'){
+		$stmt=$conn->query("SELECT * FROM  owner WHERE UserName='{$username}'");
 		$row=$stmt->fetch_assoc();
 
-		if($row['id']==$username & $row['password']==$pass) {
-		    $student= new Student($pass);
+		if($row['UserName']==$username && $row['Password']==$pass) {
+			header("Location:Home_owner.php");
+			
+		}else
+			header("location:index.php?error=1");
+
+	}else if(substr($username,-1)=="T"){
+		$stmt=$conn->query("SELECT * FROM  teacher WHERE UserName='{$username}'");
+		$row=$stmt->fetch_assoc();
+
+		if($row['UserName']==$username && $row['Password']==$pass) {
 			header("Location:Home_teacher.php");
+			
+		}else
+			header("location:index.php?error=1");
+
+	}else if(substr($username,-1)=="D"){
+		$stmt=$conn->query("SELECT * FROM  dataoperator WHERE UserName='{$username}'");
+		$row=$stmt->fetch_assoc();
+
+		if($row['UserName']==$username && $row['Password']==$pass) {
+			header("Location:Home_operator.php");
 			
 		}else
 			header("location:index.php?error=1");
@@ -118,7 +137,7 @@ $conn->close();
 
 				</form>
 				<?php
-				if(isset($_GET['error'])==true){
+				if(isset($_GET['error'])){
 					echo '<font color="#ff0000"><p align="center">invalid username or password !!</p></font>';
 				}
 				?>

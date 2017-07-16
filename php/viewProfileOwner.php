@@ -26,7 +26,7 @@
             <label for="Name"><b>Name :</b></label>
             <label id="Name"><?php echo $_SESSION['Name'];?></label>
         </li>
-        <li>
+        <!-- <li>
             <label for="NIC"><b>NIC :</b></label>
             <label id="NIC"><?php echo $_SESSION['NIC'];?></label>
         </li>
@@ -37,23 +37,23 @@
         <li>
             <label for="Gender"><b>Gender :</b></label>
             <label id="Gender"><?php echo $_SESSION['Gender'];?></label>
-        </li>
+        </li> -->
         <li>
             <label for="Address"><b>Address :</b></label>
             <label id="Address"><?php echo $_SESSION['Address'];?></label>
         </li>
-        <li>
+        <!-- <li>
             <label for="E-mail"><b>E-mail :</b></label>
             <label id="E-mail"><?php echo $_SESSION['Email'];?></label>
         </li>
-        <li>
+        <li> -->
             <label for="ContactNo"><b>Contact No :</b></label>
             <label id="ContactNo"><?php echo $_SESSION['ContactNo'];?></label>
         </li>
-        <li>
+        <!-- <li>
             <label for="Course"><b>Course :</b></label>
             <label id="Course"><?php echo $_SESSION['Course'];?></label>
-        </li>
+        </li> -->
         <li>
             <label for="JoinedDate"><b>Joined Date :</b></label>
             <label id="JoinedDate"><?php echo $_SESSION['JoinedDate'];?></label>

@@ -1,6 +1,6 @@
 
 <?php
-include 'Teacher.php';
+include 'Owner.php';
 $user="";
 session_start();
 $user = $_SESSION['user'];
@@ -16,12 +16,12 @@ if(isset($_POST['viewProfile'])){
 <head>
     <meta charset="UTF-8">
 
-    <title>Teacher Home</title>
+    <title>Owner Home</title>
     <link rel="stylesheet" type="text/css" href="../css/teachHome.css"/>
 </head>
 <body>
 <div class = "wrpper">
-    <h4> You are logged as Teacher 1 </h4>
+    <h4> You are logged as <?php echo $owner->getName(); ?> </h4>
 
 
     <div class = "top-bar">
@@ -31,7 +31,7 @@ if(isset($_POST['viewProfile'])){
 
         <div class="main">
 
-            <p><h3><u>Teacher's Home</u></h3></p>
+            <p><h3><u>Owner's Home</u></h3></p>
 
             <form action="" method="post">
 
