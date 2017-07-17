@@ -24,6 +24,7 @@ $user = unserialize($_SESSION['user']);
 
     </div><!--top-bar-->
 
+
     <div class="main">
 
         <p><h3><u>View Course Details</u></h3></p>
